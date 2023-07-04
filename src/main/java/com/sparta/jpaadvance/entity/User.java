@@ -13,13 +13,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
-    @OneToOne(mappedBy = "user")
-    private Food food;
-
-    public void addFood(Food food) {
-        this.food = food;
-        food.setUser(this); // this : 현재 객체 자신
-        // 객체 자신을 실제 외래 키의 주인한테 줌
-    }
 }
+
+
+
+
+
+
+
+
+//    public void addFood(Food food) {
+//        this.food = food;
+//        food.setUser(this); // this : 현재 객체 자신
+//        // 객체 자신을 실제 외래 키의 주인한테 줌
+//    }
