@@ -17,5 +17,5 @@ public class Food {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User user; // 객체
 }
