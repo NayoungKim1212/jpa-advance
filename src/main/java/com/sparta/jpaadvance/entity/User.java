@@ -18,7 +18,7 @@ public class User {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST,CascadeType.REMOVE}) // 외래 키 주인의 필드 : user
+    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, orphanRemoval = true) // 외래 키 주인의 필드 : user
     private List<Food> foodList = new ArrayList<>(); // 데이터베이스 테이블에 영향을 미치지 X
 
     public void addFoodList(Food food) {
